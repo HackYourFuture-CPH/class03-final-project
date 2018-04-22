@@ -8,7 +8,11 @@ In this folder you will be building a React-based UI that will be communicating 
 
 ## Folder structure
 
-Try to adhere to the given folder structure. Here is a brief explanation:
+Try to adhere to the folder structure given within the `/src` folder. Refer to the local README-files for details:
+[/components](/src/components/README.md)
+[/containers](/src/containers/README.md)
+[/services](/src/services/README.md)
+[/styles](/src/styles/README.md)
 
 ### Containers
 
