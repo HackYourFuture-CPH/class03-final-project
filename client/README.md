@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
 
-The original Create React App readme can be found [here](/create-react-app-readme.md)
+The original Create React App readme can be found [here](/client/create-react-app-readme.md)
 
 # Client
 
