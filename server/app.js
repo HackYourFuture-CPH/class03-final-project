@@ -8,10 +8,6 @@ var categoriesRouter = require('./routes/categories');
 
 var app = express();
 
-//const environment = process.env.NODE_ENV || 'development';
-//const configuration = require('./knexfile')[environment];
-//const knex = require('knex')(configuration);
-//app.use(knex);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

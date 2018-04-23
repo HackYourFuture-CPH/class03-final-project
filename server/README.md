@@ -37,3 +37,6 @@ Edit the connection info in knexfile.js to the user you just created.
 - `npm start` starts the server.
 
 Now the server should run on http://localhost:3001
+
+HINT: take a look at http://localhost:3001/categories and ./routes/categories.js
+
