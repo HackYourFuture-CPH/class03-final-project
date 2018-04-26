@@ -2,4 +2,5 @@ Tests are great for finishing features and handing them in. When you hand in you
 
 You can assure yourself that "This is Fine". http://knowyourmeme.com/memes/this-is-fine.
 
+You can read about tap here : https://www.node-tap.org/ . Feel free to use your own favorite testing tool instead :)
 
