@@ -21,7 +21,7 @@ Note that the project is split into two sub-projects. One for the [client](/clie
 
 2C: When I have decided on a piece of content to read/watch I need to be able to go to it directly so I know for sure I am watching the right content.
 
-### Third
+### Third iteration
 
 3A: When I want to explore a specific topic I need to see a list of categories related to that topic so I don’t manually have to browse all of the content.
 
