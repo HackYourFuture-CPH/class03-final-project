@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var categoriesRouter = require('./routes/categories');
+var contentsRouter = require('./routes/contents');
 
 var app = express();
 
@@ -17,6 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // TODO: insert a new route here :)
-app.use('/categories', categoriesRouter);
+app.use('/', contentRouter);
 
 module.exports = app;

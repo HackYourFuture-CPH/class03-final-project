@@ -4,48 +4,51 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      database: 'hyf_dev',
-      user:     'test',
-      password: 'test'
+   
+      user: "root",
+      password: "compulife123",
+      database: "sharingpoint"
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'contents'
     }
   },
 
  staging: {
     client: 'mysql',
     connection: {
-      database: 'hyf_staging',
-      user:     'test',
-      password: 'test'
+   
+      user: "root",
+      password: "compulife123",
+      database: "sharingpoint"
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'contents'
     }
   },
 
   production: {
     client: 'mysql',
     connection: {
-      database: 'hyf',
-      user:     'test',
-      password: 'test'
+     
+  user: "root",
+  password: "compulife123",
+  database: "sharingpoint"
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'contents'
     }
   }
 
