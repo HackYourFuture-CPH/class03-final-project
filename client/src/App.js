@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Contentform from './Components/Contentform';
-import ListView from './Components/ListView';
-import './Styles/App.css';
-import './Styles/styles.css';
+import Contentform from './components/Contentform';
+import ListView from './components/ListView';
+import './styles/App.css';
+import './styles/styles.css';
+import './styles/index.css';
 
 
 class App extends Component {

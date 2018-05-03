@@ -13,7 +13,7 @@ class Listview extends Component {
 
 componentDidMount() {
    let self = this;
-   fetch('/contents', {
+   fetch('http://localhost:3000/contents', {
        method: 'GET'
    }).then(function(response) {
        if (response.status >= 400) {

@@ -19,6 +19,7 @@ class Contentform extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.logChange=this.logChange.bind(this)
+  
 }
 
 handleSubmit(event) {
@@ -107,7 +108,8 @@ logChange(e) {
                 
  
                 <input type="submit" value="Submit" />
-                <input type="submit" value="Cancel" />
+                
+                <input type="submit" value="Cancel" onClick={this.onClickClose} />
  
                 <hr />
                 </form>

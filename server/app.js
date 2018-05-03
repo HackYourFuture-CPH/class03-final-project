@@ -17,6 +17,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // TODO: insert a new route here :)
-app.use('/contents', contentRouter);
+app.use('/', contentRouter);
 
 module.exports = app;
