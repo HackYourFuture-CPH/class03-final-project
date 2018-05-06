@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var contentsRouter = require('./routes/contents');
+var contentRouter = require('./routes/content');
 
 var app = express();
 
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // TODO: insert a new route here :)
+app.use('/', contentsRouter);
 app.use('/', contentRouter);
 
 module.exports = app;

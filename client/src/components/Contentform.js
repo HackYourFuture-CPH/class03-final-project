@@ -30,10 +30,10 @@ handleSubmit(event) {
         link: this.state.link,
         title: this.state.title,
         type: this.state.type,
-        descrition:this.state.description
+        description:this.state.description
     }
     console.log(data)
-    fetch('/contents', {
+    fetch('/content', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
