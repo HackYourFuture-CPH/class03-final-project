@@ -10,7 +10,8 @@
     "react-motion": "^0.5.2",
     "react-native-vector-icons": "^4.6.0",
     "react-scripts": "1.1.4",
-    "react-upvote": "0.0.2"
+    "react-upvote": "0.0.2",
+    "react-router-dom": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
