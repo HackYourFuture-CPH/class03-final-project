@@ -31,6 +31,9 @@ Edit the connection info in knexfile.js to the user you just created.
 -  knex migrate:latest
 - knex seed:run
 
+How to run Knex cli
+http://knexjs.org/#Migrations-CLI
+
 
 
 ### starting the server ###
@@ -39,4 +42,5 @@ Edit the connection info in knexfile.js to the user you just created.
 Now the server should run on http://localhost:3001
 
 HINT: take a look at http://localhost:3001/categories and ./routes/categories.js
+
 
