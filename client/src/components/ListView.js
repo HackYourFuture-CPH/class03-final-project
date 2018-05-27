@@ -18,7 +18,7 @@ class Listview extends Component {
     this.difficultyFilter=this.difficultyFilter.bind(this)
     this.typeFilter=this.typeFilter.bind(this)
     this.upvote = this.upvote.bind(this)
-    
+ 
     
 }
 
@@ -90,25 +90,8 @@ upvote(id,upvotes){
     });
     this.fetchData();
 }
-downvote(id,downvotes){
-   
-  fetch('/upvote', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      id: id,
-      downvotes: downvotes,
-     
-    })
-  })
-    .catch((err) => {
-      alert('Error occured while trying to Downvote');
-    });
-    this.fetchData();
-}
+
+
  render() {
   const {newValue, initValue} = this.state;
    return (
@@ -179,24 +162,18 @@ downvote(id,downvotes){
                   <div key={index} className='listItems'>
                   <table className="table table-hover" border="1">
                     <tr><td>                   
-                       <Link to={`/detailsview/${index}`}>
+                       <Link to={`/Detailsview/${index}`}>
                       <h3 className='link'><b>{a.title}</b></h3>
                       <p className='link'>{a.link}</p>
                     
-                      <button value="Upvote" key={a.id} onClick={
+                     </Link>
+                     <button value="Upvote" key={a.id} onClick={
                         ()=>{
                           this.upvote(a.id,a.upvote)
                         }
                        } >Upvote ({a.upvote})</button>
-                      
-                      <button value="downvote" key={a.id} onClick={
-                        ()=>{
-                          this.downvote(a.id,a.downvote)
-                        }
-                       } >Downvote ({a.downvote})</button>
-                      
-                     
-                    </Link>
+                       
+                       
        
                  
                   </td>   

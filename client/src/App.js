@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Contentform from './components/Contentform';
+
 import ListView from './components/ListView';
 import DetailsView from './components/Detailsview';
-import PropTypes from 'prop-types';
+
 import './styles/App.css';
 import './styles/styles.css';
 import './styles/index.css';
+import Contentform from './components/Contentform';
 
 
 
@@ -25,18 +26,12 @@ class App extends Component {
           <h1 className="App-title">SharingPoint</h1>
         </header>
         
-        <Route exact path="/detailsview/:id" component={()=>(<div></div>)} />
+        <Route exact path="/Detailsview/:id" component={DetailsView} />
        
-               <ListView/>,
-       
-
-
+        <Route exact path="/" component={ListView}/>
+        <Route exact path="/Contentform" component={Contentform}/>
       
-       
-      
-        
-      
- 
+    
       </div>
     );
   }

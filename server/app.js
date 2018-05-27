@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 // TODO: insert a new route here :)
 app.use('/', contentsRouter);
 app.use('/', contentRouter);
-app.use('/', detailsviewRouter);
+app.use('/detailsview', detailsviewRouter);
 app.use('/upvote', upvoteRouter);
 
 module.exports = app;

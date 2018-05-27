@@ -19,4 +19,17 @@ router.post('/content', function(req, res, next) {
   })
 });
 
+
+/* GET category listing. */
+router.get('/content/:id', function(req, res, next) {
+ 
+  knex('contents').where({id: req.params.id}).select().then( function(data) {
+    res.send(data);
+
+    
+  });
+});
+
+module.exports = router;
+
 module.exports = router;

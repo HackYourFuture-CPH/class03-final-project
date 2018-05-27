@@ -109,7 +109,7 @@ logChange(e) {
                 
  
                 <input type="submit" value="Submit" />
-                <Link to='/list'>
+                <Link to='/ListView'>
             <input type="submit" value='Cancel'/>
             </Link>
                 

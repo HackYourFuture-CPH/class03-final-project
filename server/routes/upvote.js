@@ -7,7 +7,8 @@ var knex  = require('../helpers/knex');
 router.post('/', function(req, res, next) {
     knex('contents').where('id',req.body.id).update ({
     upvote: req.body.upvotes+1,
-    downvote: req.body.downvotes-1,
+    
+  
     thisKeyIsSkipped: undefined
 
    
@@ -15,7 +16,7 @@ router.post('/', function(req, res, next) {
   })
   .then(function (result){
     res.json({ success: true, message: 'ok' });
-    Console.log(result)
+   
   })
 });
 
