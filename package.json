@@ -1,0 +1,22 @@
+{
+  "name": "class03-final-project",
+  "version": "1.0.0",
+  "description": "HYF final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdualrhman/class03-final-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdualrhman/class03-final-project/issues"
+  },
+  "homepage": "https://github.com/abdualrhman/class03-final-project#readme",
+  "dependencies": {
+    "react-js-pagination": "^3.0.2"
+  }
+}

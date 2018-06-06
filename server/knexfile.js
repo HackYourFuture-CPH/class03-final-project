@@ -1,12 +1,15 @@
 // Update with your config settings.
+const fs = require('fs');
+const mysql = require('mysql');
+
 
 module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      database: 'hyf_dev',
-      user:     'test',
-      password: 'test'
+      database: 'db',
+      user:     'root',
+      password: '1425300'
     },
     pool: {
       min: 2,
@@ -20,9 +23,9 @@ module.exports = {
  staging: {
     client: 'mysql',
     connection: {
-      database: 'hyf_staging',
-      user:     'test',
-      password: 'test'
+      database: 'db',
+      user:     'root',
+      password: '1425300'
     },
     pool: {
       min: 2,
@@ -36,9 +39,9 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      database: 'hyf',
-      user:     'test',
-      password: 'test'
+      database: 'db',
+      user:     'root',
+      password: '1425300'
     },
     pool: {
       min: 2,
