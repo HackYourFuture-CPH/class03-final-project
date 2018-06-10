@@ -90,43 +90,43 @@ upvote(id,upvotes){
     });
     this.fetchData();
 }
+/*downvote(id,downvotes){
+   
+  fetch('/upvote', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: id,
+      downvotes: downvotes,
+     
+    })
+  })
+    .catch((err) => {
+      console.log('Error occured while trying to downvote');
+    });
+    this.fetchData();
+}*/
 
 
  render() {
   const {newValue, initValue} = this.state;
    return (
-     <div className="listview">
-     <h2>Listview</h2>
-     
-     <Router>
-    <div>
-      <ul>
-        
-        <li>
-          <Link to="/contentform"><input type="button" value="Add Content" /></Link>
-        </li>
-       
-       
-      </ul>
 
-    
-
-      <Route exact path="/contentform" component={Contentform} />
-     
-
-   
-    </div>
-  </Router>
-
- <hr />
- <form >
+     <div className="w3-container-2">
+     <h2>Search By</h2>
+<form >
  <label>Categories: </label>  <br />
    <select name="categories"   onChange={this.categoriesFilter}>
    <option value="allcategories">All Categories</option>
      <option value="javascript">Javacript</option>
      <option value="css">CSS</option>
      <option value="mysql">MYSQL</option>
-     <option value="others">Others</option>
+     <option value="php">PHP</option>
+    <option value="github">GITHUB</option>
+    <option value="others">Others</option>
     </select>
     <br />
                
@@ -145,40 +145,46 @@ upvote(id,upvotes){
    <option value="allltypes">ALL Types</option>
    <option value="Video">Video</option>
     <option value="Audio">Audio</option>
+    <option value="Article">Article</option>
+                <option value="Others">Others</option>
     </select>
    <br />
 <input type="submit" value="Search" />
+
 <hr />
    </form>
+  
    
    {
       initValue &&
-        <div className='list'>
+        <div className="w3-container">
               {
                 newValue.map(a=>{
                   const index = newValue.indexOf(a);
                
                   return (
-                  <div key={index} className='listItems'>
-                  <table className="table table-hover" border="1">
-                    <tr><td>                   
-                       <Link to={`/Detailsview/${index}`}>
-                      <h3 className='link'><b>{a.title}</b></h3>
-                      <p className='link'>{a.link}</p>
+                  <div key={index} className="w3-container">
+                                    
+                  <Link to={`/Detailsview/${a.id}`}>
+                  <table className="table table-hover" border="0">
+                  <tr><td>
+                      
+                      <h2> <b> {a.title}</b></h2>
+                      <p> {a.link}</p>
+                      <p>{a.type}</p></td></tr>
+                      </table>
                     
                      </Link>
                      <button value="Upvote" key={a.id} onClick={
                         ()=>{
                           this.upvote(a.id,a.upvote)
                         }
-                       } >Upvote ({a.upvote})</button>
+                       } >Like ({a.upvote})</button>
                        
                        
-       
+                       <hr />
                  
-                  </td>   
-                  </tr>
-                    </table>
+                 
                   </div>
                  )
                 })

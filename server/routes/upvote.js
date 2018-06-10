@@ -5,6 +5,7 @@ var knex  = require('../helpers/knex');
 
 /* GET category listing. */
 router.post('/', function(req, res, next) {
+    console.log(req.body)
     knex('contents').where('id',req.body.id).update ({
     upvote: req.body.upvotes+1,
     

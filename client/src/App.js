@@ -17,22 +17,30 @@ class App extends Component {
   render() {
     return (
       
-       <div className="App">
-        
-        
-    
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">SharingPoint</h1>
-        </header>
-        
-        <Route exact path="/Detailsview/:id" component={DetailsView} />
+  <div className="App">
+
+   <Router>
+    <div>
+      <ul>
+      <li>
+          <Link to="/"><h1 className="App-title">SharingPoint</h1></Link>
+        </li>
        
-        <Route exact path="/" component={ListView}/>
-        <Route exact path="/Contentform" component={Contentform}/>
-      
+        <li>
+        <Link to="/contentform"><h3>Add Content</h3></Link>
+        </li>
+        
+      </ul>
+
     
-      </div>
+
+    <Route exact path="/Detailsview/:id" component={DetailsView} />
+       
+       <Route exact path="/" component={ListView}/>
+       <Route exact path="/Contentform" component={Contentform}/>
+    </div>
+  </Router>
+   </div>
     );
   }
  }
