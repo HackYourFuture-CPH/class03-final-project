@@ -4,7 +4,7 @@ var router = express.Router();
 var knex  = require('../helpers/knex');
 
 /* GET category listing. */
-router.post('/content', function(req, res, next) {
+router.post('/content', function(req, res) {
   knex('contents').insert({
     categories: req.body.categories,
     description:req.body.description,
@@ -21,10 +21,11 @@ router.post('/content', function(req, res, next) {
 
 
 /* GET category listing. */
-router.get('/content/:id', function(req, res, next) {
+router.get('/content/:id', function(req, res) {
  
   knex('contents').where({id: req.params.id}).select().then( function(data) {
-    res.send(data);
+    console.log(data);
+    res.send(data[0]);
 
     
   });
@@ -32,4 +33,3 @@ router.get('/content/:id', function(req, res, next) {
 
 module.exports = router;
 
-module.exports = router;
